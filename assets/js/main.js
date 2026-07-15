@@ -128,6 +128,91 @@
     }, 6000);
   }
 
+  /* ---------- Pestañas de especies ---------- */
+  function initSpeciesTabs() {
+    var tabs = document.querySelectorAll(".species__tab");
+    if (!tabs.length) return;
+
+    tabs.forEach(function (tab) {
+      tab.addEventListener("click", function () {
+        var targetId = tab.getAttribute("data-target");
+        var panel = document.getElementById(targetId);
+        if (!panel) return;
+
+        tabs.forEach(function (t) {
+          var active = t === tab;
+          t.classList.toggle("is-active", active);
+          t.setAttribute("aria-selected", active ? "true" : "false");
+        });
+
+        document.querySelectorAll(".species__panel").forEach(function (p) {
+          p.hidden = p !== panel;
+        });
+      });
+    });
+  }
+
+  /* ---------- Comparador macho / hembra (slider) ---------- */
+  function initCompare() {
+    var compares = document.querySelectorAll(".compare");
+    if (!compares.length) return;
+
+    compares.forEach(function (compare) {
+      var slider = compare.querySelector("[data-compare-slider]");
+      var male = compare.querySelector(".compare__frame--male");
+      var divider = compare.querySelector(".compare__divider");
+      var handle = compare.querySelector(".compare__handle");
+      var label = compare.querySelector("[data-compare-label]");
+      if (!slider || !male) return;
+
+      var update = function () {
+        var v = Number(slider.value);
+        male.style.clipPath = "inset(0 " + (100 - v) + "% 0 0)";
+        if (divider) divider.style.left = v + "%";
+        if (handle) handle.style.left = v + "%";
+        if (label) label.textContent = v >= 50 ? "Macho" : "Hembra";
+      };
+
+      slider.addEventListener("input", update);
+      update();
+    });
+  }
+
+  /* ---------- Galería con lightbox ---------- */
+  function initGallery() {
+    var items = document.querySelectorAll("[data-gallery-item]");
+    var lightbox = document.getElementById("lightbox");
+    if (!items.length || !lightbox) return;
+
+    var content = lightbox.querySelector("[data-lightbox-content]");
+    var closeBtn = lightbox.querySelector("[data-lightbox-close]");
+
+    var open = function (html) {
+      content.innerHTML = html;
+      lightbox.classList.add("is-open");
+      lightbox.setAttribute("aria-hidden", "false");
+    };
+    var close = function () {
+      lightbox.classList.remove("is-open");
+      lightbox.setAttribute("aria-hidden", "true");
+      content.innerHTML = "";
+    };
+
+    items.forEach(function (item) {
+      item.addEventListener("click", function () {
+        open(item.innerHTML);
+      });
+    });
+
+    if (closeBtn) closeBtn.addEventListener("click", close);
+    lightbox.addEventListener("click", function (e) {
+      if (e.target === lightbox) close();
+    });
+    document.addEventListener("keydown", function (e) {
+      if (e.key === "Escape") close();
+    });
+  }
+
   /* ---------- Parallax sutil del topo del hero ---------- */
   function initParallax() {
     var topo = document.querySelector(".hero__topo");
@@ -153,6 +238,9 @@
     safe(initBurger, "burger");
     safe(initReveals, "reveals");
     safe(initCounters, "counters");
+    safe(initSpeciesTabs, "speciesTabs");
+    safe(initCompare, "compare");
+    safe(initGallery, "gallery");
     safe(initParallax, "parallax");
   }
 

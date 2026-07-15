@@ -1,0 +1,36 @@
+# ============================================================
+# MARTINEZ HUNTING EXPEDITIONS — .htaccess
+# Estrategia de caché en 3 capas: HTML nunca se cachea,
+# los assets se cachean largo y se rompen con ?v=YYYYMMDD.
+# ============================================================
+
+# 1) HTML: siempre fresco
+<FilesMatch "\.(html)$">
+  <IfModule mod_headers.c>
+    Header set Cache-Control "no-cache, no-store, must-revalidate"
+    Header set Pragma "no-cache"
+    Header set Expires "0"
+  </IfModule>
+</FilesMatch>
+
+# 2) CSS / JS: caché larga (el cache-buster ?v= fuerza la actualización)
+<FilesMatch "\.(css|js)$">
+  <IfModule mod_headers.c>
+    Header set Cache-Control "public, max-age=31536000, immutable"
+  </IfModule>
+</FilesMatch>
+
+# 3) Imágenes y fuentes: caché larga
+<FilesMatch "\.(webp|jpg|jpeg|png|svg|ico|woff2|woff)$">
+  <IfModule mod_headers.c>
+    Header set Cache-Control "public, max-age=31536000, immutable"
+  </IfModule>
+</FilesMatch>
+
+# Compresión
+<IfModule mod_deflate.c>
+  AddOutputFilterByType DEFLATE text/html text/css application/javascript image/svg+xml
+</IfModule>
+
+# UTF-8 por defecto
+AddDefaultCharset UTF-8

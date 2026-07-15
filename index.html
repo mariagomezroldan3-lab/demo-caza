@@ -4,37 +4,54 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Martinez Hunting Expeditions — Caza de arruí en abierto · Alicante</title>
-  <meta name="description" content="Caza mayor en abierto en las sierras de Alicante. Especialistas en rececho de arruí y muflón en terreno libre. Más de 20 años de experiencia.">
-  
-  <!-- Google AdSense -->
-  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9789292323574377"
-     crossorigin="anonymous"></script>
+  <meta name="description" content="Caza mayor en abierto en las sierras de Alicante. Especialistas en rececho de arruí, muflón y jabalí en 22.000 hectáreas de terreno libre. Más de 20 años de experiencia.">
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@500;700;800&family=Archivo:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="assets/css/styles.css?v=20260713">
+  <link rel="stylesheet" href="assets/css/styles.css?v=20260715">
+  <link rel="icon" type="image/png" href="assets/img/logo-circulo.png">
 </head>
 <body>
+
+  <!-- Degradados compartidos por todas las siluetas topográficas del sitio -->
+  <svg width="0" height="0" style="position:absolute" aria-hidden="true">
+    <defs>
+      <linearGradient id="ridge" x1="0" y1="0" x2="0" y2="1">
+        <stop offset="0" stop-color="var(--esparto)" stop-opacity=".28"/>
+        <stop offset="1" stop-color="var(--esparto)" stop-opacity="0"/>
+      </linearGradient>
+      <radialGradient id="dawn" cx=".62" cy=".38" r=".55">
+        <stop offset="0" stop-color="var(--esparto)" stop-opacity=".22"/>
+        <stop offset="1" stop-color="var(--esparto)" stop-opacity="0"/>
+      </radialGradient>
+    </defs>
+  </svg>
 
   <!-- ============ SPLASH ============ -->
   <div class="splash" id="splash" aria-hidden="true">
     <div class="splash__mark">
       <span class="splash__coords">38°32′N · 0°38′W</span>
-      <span class="splash__name">MARTINEZ HUNTING</span>
+      <img class="splash__logo" src="assets/img/logo-circulo.png" alt="Martinez Hunting Expeditions">
     </div>
   </div>
 
   <!-- ============ HEADER ============ -->
   <header class="header" id="header">
     <a class="header__brand" href="#inicio">
-      <span class="header__brand-main">MARTINEZ</span>
-      <span class="header__brand-sub">HUNTING EXPEDITIONS</span>
+      <img class="header__logo" src="assets/img/logo-circulo.png" alt="">
+      <span class="header__brand-text">
+        <span class="header__brand-main">MARTINEZ</span>
+        <span class="header__brand-sub">HUNTING EXPEDITIONS</span>
+      </span>
     </a>
     <nav class="header__nav" id="nav" aria-label="Navegación principal">
       <a href="#la-caza">La caza</a>
-      <a href="#el-arrui">El arruí</a>
-      <a href="#expedicion">La expedición</a>
+      <a href="#especies">Especies</a>
+      <a href="#expedicion">Expedición</a>
+      <a href="#equipo">Equipo</a>
+      <a href="#equipamiento">Alquiler</a>
+      <a href="#galeria">Galería</a>
       <a href="#nosotros">Nosotros</a>
       <a class="header__cta" href="#contacto">Reservar</a>
     </nav>
@@ -47,7 +64,7 @@
 
     <!-- ============ HERO ============ -->
     <section class="hero" id="inicio">
-      <svg class="hero__topo" viewBox="0 0 1440 900" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
+      <svg class="hero__topo section-topo" viewBox="0 0 1440 900" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
         <g class="hero__topo-lines" fill="none" stroke="var(--esparto)" stroke-width="1">
           <path d="M-50,780 C250,700 420,760 700,660 C980,560 1180,640 1490,540" opacity=".14"/>
           <path d="M-50,700 C260,620 460,690 720,590 C980,490 1200,560 1490,470" opacity=".12"/>
@@ -75,13 +92,21 @@
 
       <div class="hero__strip" aria-hidden="true">
         <div class="hero__strip-track">
-          <span>38°32′ N — 0°38′ W</span><span>ALT. 400 – 1.400 M</span><span>AMMOTRAGUS LERVIA</span><span>RECECHO EN LIBRE</span><span>TEMPORADA TODO EL AÑO</span><span>38°32′ N — 0°38′ W</span><span>ALT. 400 – 1.400 M</span><span>AMMOTRAGUS LERVIA</span><span>RECECHO EN LIBRE</span><span>TEMPORADA TODO EL AÑO</span>
+          <span>38°32′ N — 0°38′ W</span><span>ALT. 400 – 1.400 M</span><span>22.000 HA DE COTO</span><span>RECECHO EN LIBRE</span><span>TEMPORADA TODO EL AÑO</span><span>38°32′ N — 0°38′ W</span><span>ALT. 400 – 1.400 M</span><span>22.000 HA DE COTO</span><span>RECECHO EN LIBRE</span><span>TEMPORADA TODO EL AÑO</span>
         </div>
       </div>
     </section>
 
     <!-- ============ MANIFIESTO ============ -->
     <section class="manifesto" id="la-caza">
+      <svg class="section-topo" viewBox="0 0 1440 900" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
+        <g fill="none" stroke="var(--esparto)" stroke-width="1">
+          <path d="M-50,780 C250,700 420,760 700,660 C980,560 1180,640 1490,540" opacity=".11"/>
+          <path d="M-50,620 C280,545 490,610 740,520 C990,430 1220,490 1490,400" opacity=".08"/>
+          <path d="M-50,460 C320,400 540,455 780,385 C1020,315 1255,355 1490,275" opacity=".06"/>
+          <path d="M-50,310 C360,265 580,305 820,255 C1060,205 1285,235 1490,170" opacity=".04"/>
+        </g>
+      </svg>
       <div class="container">
         <p class="label reveal">01 — La caza</p>
         <h2 class="manifesto__text reveal">
@@ -93,90 +118,137 @@
             <span class="manifesto__label">Años en la sierra</span>
           </div>
           <div class="manifesto__item reveal">
+            <span class="manifesto__num" data-count="22" data-suffix=".000 ha">0</span>
+            <span class="manifesto__label">De coto en Alicante</span>
+          </div>
+          <div class="manifesto__item reveal">
             <span class="manifesto__num" data-count="100" data-suffix="%">0</span>
             <span class="manifesto__label">Terreno libre, sin vallas</span>
           </div>
           <div class="manifesto__item reveal">
-            <span class="manifesto__num" data-count="2">0</span>
-            <span class="manifesto__label">Especies: arruí y muflón</span>
+            <span class="manifesto__num" data-count="3">0</span>
+            <span class="manifesto__label">Especies: arruí, muflón y jabalí</span>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- ============ EL ARRUÍ ============ -->
-    <section class="species" id="el-arrui">
-      <div class="container species__layout">
-        <div class="species__visual reveal">
-          <svg viewBox="0 0 520 460" class="species__svg" role="img" aria-label="Silueta de un arruí recortado sobre una cresta al amanecer">
-            <defs>
-              <linearGradient id="ridge" x1="0" y1="0" x2="0" y2="1">
-                <stop offset="0" stop-color="var(--esparto)" stop-opacity=".28"/>
-                <stop offset="1" stop-color="var(--esparto)" stop-opacity="0"/>
-              </linearGradient>
-              <radialGradient id="dawn" cx=".62" cy=".38" r=".55">
-                <stop offset="0" stop-color="var(--esparto)" stop-opacity=".22"/>
-                <stop offset="1" stop-color="var(--esparto)" stop-opacity="0"/>
-              </radialGradient>
-            </defs>
-            <!-- sol de amanecer -->
-            <rect x="0" y="0" width="520" height="460" fill="url(#dawn)"/>
-            <circle cx="322" cy="175" r="46" fill="none" stroke="var(--esparto)" stroke-opacity=".5" stroke-width="1"/>
-            <circle cx="322" cy="175" r="70" fill="none" stroke="var(--esparto)" stroke-opacity=".2" stroke-width="1"/>
-            <!-- contornos topográficos -->
-            <path d="M20,430 C120,415 200,425 320,400 C420,380 470,395 505,385" fill="none" stroke="var(--esparto)" stroke-opacity=".3" stroke-width="1"/>
-            <path d="M20,405 C130,388 220,398 330,372 C430,350 475,365 505,356" fill="none" stroke="var(--esparto)" stroke-opacity=".22" stroke-width="1"/>
-            <path d="M20,380 C140,362 235,370 340,345 C438,322 478,336 505,328" fill="none" stroke="var(--esparto)" stroke-opacity=".15" stroke-width="1"/>
-            <!-- cresta rocosa -->
-            <path d="M0,460 L0,392 C60,388 110,378 160,362 L212,346 L258,338 L305,322 L355,314 C420,306 470,314 520,304 L520,460 Z" fill="url(#ridge)"/>
-            <path d="M0,392 C60,388 110,378 160,362 L212,346 L258,338 L305,322 L355,314 C420,306 470,314 520,304" fill="none" stroke="var(--bone)" stroke-opacity=".35" stroke-width="1.5"/>
-            <!-- silueta de arruí sobre la cresta (perfil, mirando a la izquierda) -->
-            <g class="species__animal" fill="var(--ink-deep)" transform="translate(78 128) scale(0.62)">
-              <!-- cuerpo y patas -->
-              <path d="M236,338
-                l3,-26 5,-1 1,17 6,-14
-                c2,-14 12,-24 26,-27
-                l34,-4
-                c12,-1 22,5 27,15
-                l6,13 8,10 -2,7 -9,-3 -6,-9
-                -1,20 5,2 -2,25 -6,0 0,-22 -5,-2 -3,22 -6,0 1,-24
-                -20,3 -14,-2
-                -2,10 4,3 -3,23 -6,0 1,-21 -4,-3 -5,20 -6,1 4,-33 z"/>
-              <!-- cuello y cabeza con cuerna en arco -->
-              <path d="M247,286
-                c-4,-10 -3,-20 3,-27
-                c-8,-2 -13,-9 -13,-17
-                c0,-10 8,-18 18,-18
-                c3,0 6,1 9,3
-                c5,-6 13,-8 20,-5
-                c9,4 13,14 9,23
-                c-2,5 -6,8 -11,9
-                c3,4 4,9 3,14
-                l-8,16
-                c-8,5 -20,6 -30,2 z"/>
-              <!-- barbas del pecho, rasgo característico del arruí -->
-              <path d="M262,300 l-3,20 -4,0 1,-19 z M270,302 l-2,21 -4,0 1,-20 z"/>
-            </g></svg>
-          <p class="species__photo-note">— espacio reservado para tu fotografía de trofeo —</p>
+    <!-- ============ ESPECIES ============ -->
+    <section class="species" id="especies">
+      <svg class="section-topo" viewBox="0 0 1440 900" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
+        <g fill="none" stroke="var(--esparto)" stroke-width="1">
+          <path d="M-50,760 C260,690 440,740 720,650 C1000,560 1200,620 1490,530" opacity=".10"/>
+          <path d="M-50,600 C280,535 500,600 750,510 C1000,420 1230,480 1490,390" opacity=".07"/>
+          <path d="M-50,440 C300,385 540,445 800,365 C1040,290 1260,340 1490,260" opacity=".05"/>
+        </g>
+      </svg>
+      <div class="container">
+        <p class="label reveal">02 — Las especies</p>
+        <h2 class="section-title reveal">Tres trofeos, un mismo terreno libre</h2>
+        <p class="species__intro reveal">Arruí, muflón y jabalí comparten las mismas sierras: 22.000 hectáreas de coto sin vallas donde cada pieza se gana a pulso, no en un cercado.</p>
+
+        <div class="species__tabs reveal" role="tablist" aria-label="Especies">
+          <button class="species__tab is-active" type="button" id="tab-arrui" role="tab" aria-selected="true" aria-controls="panel-arrui" data-target="panel-arrui">Arruí</button>
+          <button class="species__tab" type="button" id="tab-muflon" role="tab" aria-selected="false" aria-controls="panel-muflon" data-target="panel-muflon">Muflón</button>
+          <button class="species__tab" type="button" id="tab-jabali" role="tab" aria-selected="false" aria-controls="panel-jabali" data-target="panel-jabali">Jabalí</button>
         </div>
-        <div class="species__content">
-          <p class="label reveal">02 — La especie</p>
-          <h2 class="section-title reveal">El arruí</h2>
-          <p class="species__lead reveal">El <em>Ammotragus lervia</em> es probablemente el trofeo más exigente de la península. Vive en lo más quebrado de la sierra alicantina, ve antes de ser visto y castiga cada error de aproximación. Un macho representativo, con sus cuernas en arco y las barbas al viento sobre una cresta, se recuerda toda la vida.</p>
-          <dl class="species__data">
-            <div class="species__row reveal"><dt>Nombre científico</dt><dd>Ammotragus lervia</dd></div>
-            <div class="species__row reveal"><dt>Hábitat</dt><dd>Cortados y laderas de esparto, 400–1.400 m</dd></div>
-            <div class="species__row reveal"><dt>Trofeos representativo</dt><dd>Cuerna en arco, machos representativos y hembras</dd></div>
-            <div class="species__row reveal"><dt>Modalidad</dt><dd>Rececho a pie en terreno abierto</dd></div>
-            <div class="species__row reveal"><dt>Temporada</dt><dd>Todo el año, según planificación de la finca</dd></div>
-          </dl>
-          <p class="species__secondary reveal">También organizamos rececho de <strong>muflón en libre</strong> en las mismas sierras. Consúltanos disponibilidad y combinados.</p>
+
+        <div class="species__panels">
+
+          <!-- ---- ARRUÍ ---- -->
+          <article class="species__panel" id="panel-arrui" role="tabpanel" aria-labelledby="tab-arrui">
+            <div class="species__layout">
+              <div class="species__visual">
+                <div class="compare">
+                  <div class="compare__frame compare__frame--female">
+                    <img src="assets/img/2.jpeg" alt="Trofeo de arruí hembra">
+                  </div>
+                  <div class="compare__frame compare__frame--male">
+                    <img src="assets/img/8.jpeg" alt="Trofeo de arruí macho">
+                  </div>
+                  <p class="compare__label" data-compare-label>Hembra</p>
+                  <div class="compare__divider" aria-hidden="true"></div>
+                  <div class="compare__handle" aria-hidden="true">↔</div>
+                  <input type="range" min="0" max="100" value="50" class="compare__slider" data-compare-slider aria-label="Deslizar para comparar macho y hembra de arruí">
+                </div>
+              </div>
+              <div class="species__content">
+                <p class="species__lead reveal">El <em>Ammotragus lervia</em> es probablemente el trofeo más exigente de la península. Vive en lo más quebrado de la sierra alicantina, ve antes de ser visto y castiga cada error de aproximación.</p>
+                <dl class="species__data">
+                  <div class="species__row reveal"><dt>Nombre científico</dt><dd>Ammotragus lervia</dd></div>
+                  <div class="species__row reveal"><dt>Hábitat</dt><dd>Cortados y laderas de esparto, 400–1.400 m</dd></div>
+                  <div class="species__row reveal"><dt>Se caza</dt><dd>Macho y hembra</dd></div>
+                  <div class="species__row reveal"><dt>Trofeo representativo</dt><dd>Cuerna en arco, machos representativos</dd></div>
+                  <div class="species__row reveal"><dt>Modalidad</dt><dd>Rececho a pie en terreno abierto</dd></div>
+                  <div class="species__row reveal"><dt>Temporada</dt><dd>Todo el año, según planificación de la finca</dd></div>
+                </dl>
+              </div>
+            </div>
+          </article>
+
+          <!-- ---- MUFLÓN ---- -->
+          <article class="species__panel" id="panel-muflon" role="tabpanel" aria-labelledby="tab-muflon" hidden>
+            <div class="species__layout">
+              <div class="species__visual">
+                <div class="species__frame">
+                  <img src="assets/img/13.jpeg" alt="Trofeo de muflón">
+                </div>
+              </div>
+              <div class="species__content">
+                <p class="species__lead reveal">El muflón se mueve en manada por el monte mediterráneo y exige tanta paciencia como el arruí. Su cuerna enrollada en espiral es uno de los trofeos más buscados de Europa.</p>
+                <dl class="species__data">
+                  <div class="species__row reveal"><dt>Nombre científico</dt><dd>Ovis musimon</dd></div>
+                  <div class="species__row reveal"><dt>Hábitat</dt><dd>Monte mediterráneo y pinar, 300–1.200 m</dd></div>
+                  <div class="species__row reveal"><dt>Se caza</dt><dd>Macho y hembra</dd></div>
+                  <div class="species__row reveal"><dt>Trofeo representativo</dt><dd>Cuerna enrollada en espiral</dd></div>
+                  <div class="species__row reveal"><dt>Modalidad</dt><dd>Rececho a pie en terreno abierto</dd></div>
+                  <div class="species__row reveal"><dt>Temporada</dt><dd>Todo el año, según planificación de la finca</dd></div>
+                </dl>
+              </div>
+            </div>
+          </article>
+
+          <!-- ---- JABALÍ ---- -->
+          <article class="species__panel" id="panel-jabali" role="tabpanel" aria-labelledby="tab-jabali" hidden>
+            <div class="species__layout">
+              <div class="species__visual">
+                <div class="species__frame">
+                  <svg viewBox="0 0 520 460" class="species__svg" aria-hidden="true">
+                    <rect x="0" y="0" width="520" height="460" fill="url(#dawn)"/>
+                    <path d="M20,430 C120,415 200,425 320,400 C420,380 470,395 505,385" fill="none" stroke="var(--esparto)" stroke-opacity=".3" stroke-width="1"/>
+                    <path d="M20,405 C130,388 220,398 330,372 C430,350 475,365 505,356" fill="none" stroke="var(--esparto)" stroke-opacity=".22" stroke-width="1"/>
+                    <path d="M0,460 L0,392 C60,388 110,378 160,362 L212,346 L258,338 L305,322 L355,314 C420,306 470,314 520,304 L520,460 Z" fill="url(#ridge)"/>
+                    <path d="M0,392 C60,388 110,378 160,362 L212,346 L258,338 L305,322 L355,314 C420,306 470,314 520,304" fill="none" stroke="var(--bone)" stroke-opacity=".35" stroke-width="1.5"/>
+                  </svg>
+                  <p class="species__photo-note">espacio reservado para fotografía de jabalí</p>
+                </div>
+              </div>
+              <div class="species__content">
+                <p class="species__lead reveal">El jabalí completa el coto: se mueve de noche por el monte bajo y el matorral, y pone a prueba la puntería tanto como la paciencia.</p>
+                <dl class="species__data">
+                  <div class="species__row reveal"><dt>Nombre científico</dt><dd>Sus scrofa</dd></div>
+                  <div class="species__row reveal"><dt>Hábitat</dt><dd>Monte bajo, matorral y zonas de agua</dd></div>
+                  <div class="species__row reveal"><dt>Trofeo representativo</dt><dd>Defensas, ejemplares adultos</dd></div>
+                  <div class="species__row reveal"><dt>Modalidad</dt><dd>Espera y rececho nocturno</dd></div>
+                  <div class="species__row reveal"><dt>Temporada</dt><dd>Todo el año, según planificación de la finca</dd></div>
+                </dl>
+              </div>
+            </div>
+          </article>
+
         </div>
       </div>
     </section>
 
     <!-- ============ LA EXPEDICIÓN ============ -->
     <section class="expedition" id="expedicion">
+      <svg class="section-topo" viewBox="0 0 1440 900" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
+        <g fill="none" stroke="var(--esparto)" stroke-width="1">
+          <path d="M-50,780 C250,700 420,760 700,660 C980,560 1180,640 1490,540" opacity=".10"/>
+          <path d="M-50,620 C280,545 490,610 740,520 C990,430 1220,490 1490,400" opacity=".07"/>
+          <path d="M-50,460 C320,400 540,455 780,385 C1020,315 1255,355 1490,275" opacity=".05"/>
+        </g>
+      </svg>
       <div class="container">
         <p class="label reveal">03 — La expedición</p>
         <h2 class="section-title reveal">Una jornada de rececho</h2>
@@ -217,11 +289,141 @@
       </div>
     </section>
 
+    <!-- ============ EQUIPO ============ -->
+    <section class="team" id="equipo">
+      <div class="container">
+        <p class="label reveal">04 — Nuestro equipo</p>
+        <h2 class="section-title reveal">Quién te lleva a la sierra</h2>
+        <p class="team__intro reveal">Guías profesionales que conocen cada barranco del coto por su nombre.</p>
+        <div class="team__grid">
+          <article class="team__card reveal">
+            <div class="team__photo"><img src="assets/img/guia-hugo.jpg" alt="Hugo, guía de campo"></div>
+            <h3 class="team__name">Hugo</h3>
+            <p class="team__role">Guía de campo</p>
+          </article>
+          <article class="team__card reveal">
+            <div class="team__photo"><img src="assets/img/guia-pepe.jpg" alt="Pepe, guía principal"></div>
+            <h3 class="team__name">Pepe</h3>
+            <p class="team__role">Guía principal</p>
+          </article>
+          <article class="team__card reveal">
+            <div class="team__photo"><p class="species__photo-note">espacio reservado para foto del guía</p></div>
+            <h3 class="team__name">Nombre del guía</h3>
+            <p class="team__role">Guía de campo</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ EQUIPAMIENTO ============ -->
+    <section class="rentals" id="equipamiento">
+      <svg class="section-topo" viewBox="0 0 1440 900" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
+        <g fill="none" stroke="var(--esparto)" stroke-width="1">
+          <path d="M-50,780 C250,700 420,760 700,660 C980,560 1180,640 1490,540" opacity=".10"/>
+          <path d="M-50,620 C280,545 490,610 740,520 C990,430 1220,490 1490,400" opacity=".07"/>
+        </g>
+      </svg>
+      <div class="container">
+        <p class="label reveal">05 — Equipamiento</p>
+        <h2 class="section-title reveal">Rifles disponibles para alquiler</h2>
+        <p class="rentals__intro reveal">Si viajas sin arma, ponemos a tu disposición rifles homologados y mantenidos. Cuéntanos tu experiencia y calibre preferido y te asesoramos.</p>
+        <div class="rentals__grid">
+          <article class="rentals__card reveal">
+            <div class="rentals__photo"><p class="species__photo-note">espacio reservado para foto del rifle</p></div>
+            <h3 class="rentals__name">Modelo del rifle</h3>
+            <dl class="rentals__specs">
+              <div><dt>Calibre</dt><dd>—</dd></div>
+              <div><dt>Óptica</dt><dd>—</dd></div>
+              <div><dt>Precio / día</dt><dd>—</dd></div>
+            </dl>
+          </article>
+          <article class="rentals__card reveal">
+            <div class="rentals__photo"><p class="species__photo-note">espacio reservado para foto del rifle</p></div>
+            <h3 class="rentals__name">Modelo del rifle</h3>
+            <dl class="rentals__specs">
+              <div><dt>Calibre</dt><dd>—</dd></div>
+              <div><dt>Óptica</dt><dd>—</dd></div>
+              <div><dt>Precio / día</dt><dd>—</dd></div>
+            </dl>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ GALERÍA ============ -->
+    <section class="gallery" id="galeria">
+      <svg class="section-topo" viewBox="0 0 1440 900" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
+        <g fill="none" stroke="var(--esparto)" stroke-width="1">
+          <path d="M-50,780 C250,700 420,760 700,660 C980,560 1180,640 1490,540" opacity=".10"/>
+          <path d="M-50,620 C280,545 490,610 740,520 C990,430 1220,490 1490,400" opacity=".07"/>
+          <path d="M-50,460 C320,400 540,455 780,385 C1020,315 1255,355 1490,275" opacity=".05"/>
+        </g>
+      </svg>
+      <div class="container">
+        <p class="label reveal">06 — Galería</p>
+        <h2 class="section-title reveal">Trofeos y jornadas en la sierra</h2>
+        <p class="gallery__intro reveal">Capturas reales de nuestras expediciones. Tocá cualquier foto para ampliarla.</p>
+        <div class="gallery__grid">
+          <button class="gallery__item gallery__item--big reveal" type="button" data-gallery-item>
+            <img src="assets/img/8.jpeg" alt="Trofeo de arruí macho">
+          </button>
+          <button class="gallery__item reveal" type="button" data-gallery-item>
+            <img src="assets/img/2.jpeg" alt="Trofeo de arruí hembra">
+          </button>
+          <button class="gallery__item gallery__item--tall reveal" type="button" data-gallery-item>
+            <img src="assets/img/9.jpeg" alt="Trofeo de arruí macho">
+          </button>
+          <button class="gallery__item reveal" type="button" data-gallery-item>
+            <img src="assets/img/1.jpeg" alt="Arruí en el coto">
+          </button>
+          <button class="gallery__item gallery__item--wide reveal" type="button" data-gallery-item>
+            <img src="assets/img/11.jpeg" alt="Trofeo de arruí">
+          </button>
+          <button class="gallery__item reveal" type="button" data-gallery-item>
+            <img src="assets/img/3.jpeg" alt="Trofeo de arruí">
+          </button>
+          <button class="gallery__item reveal" type="button" data-gallery-item>
+            <img src="assets/img/4.jpeg" alt="Trofeo de arruí hembra">
+          </button>
+          <button class="gallery__item gallery__item--tall reveal" type="button" data-gallery-item>
+            <img src="assets/img/10.jpeg" alt="Trofeo de arruí">
+          </button>
+          <button class="gallery__item reveal" type="button" data-gallery-item>
+            <img src="assets/img/5.jpeg" alt="Trofeo de arruí hembra">
+          </button>
+          <button class="gallery__item gallery__item--wide reveal" type="button" data-gallery-item>
+            <img src="assets/img/12.jpeg" alt="Trofeo de arruí">
+          </button>
+          <button class="gallery__item reveal" type="button" data-gallery-item>
+            <img src="assets/img/6.jpeg" alt="Trofeo de arruí">
+          </button>
+          <button class="gallery__item reveal" type="button" data-gallery-item>
+            <img src="assets/img/7.jpeg" alt="Trofeo de arruí">
+          </button>
+          <button class="gallery__item reveal" type="button" data-gallery-item>
+            <img src="assets/img/13.jpeg" alt="Trofeo de muflón">
+          </button>
+          <button class="gallery__item reveal" type="button" data-gallery-item>
+            <img src="assets/img/14.jpeg" alt="Trofeo de muflón">
+          </button>
+        </div>
+      </div>
+    </section>
+
     <!-- ============ NOSOTROS ============ -->
     <section class="about" id="nosotros">
+      <svg class="section-topo" viewBox="0 0 1440 900" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
+        <g fill="none" stroke="var(--esparto)" stroke-width="1">
+          <path d="M-50,780 C250,700 420,760 700,660 C980,560 1180,640 1490,540" opacity=".12"/>
+          <path d="M-50,700 C260,620 460,690 720,590 C980,490 1200,560 1490,470" opacity=".10"/>
+          <path d="M-50,620 C280,545 490,610 740,520 C990,430 1220,490 1490,400" opacity=".08"/>
+          <path d="M-50,540 C300,470 520,530 760,450 C1000,370 1240,420 1490,335" opacity=".06"/>
+          <path d="M-50,460 C320,400 540,455 780,385 C1020,315 1255,355 1490,275" opacity=".05"/>
+        </g>
+      </svg>
       <div class="container about__layout">
         <div>
-          <p class="label reveal">04 — Nosotros</p>
+          <p class="label reveal">07 — Nosotros</p>
           <h2 class="section-title reveal">Veinte años leyendo esta sierra</h2>
         </div>
         <div class="about__text">
@@ -233,7 +435,7 @@
 
     <!-- ============ CONTACTO ============ -->
     <section class="contact" id="contacto">
-      <svg class="contact__topo" viewBox="0 0 1440 500" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
+      <svg class="contact__topo section-topo" viewBox="0 0 1440 500" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
         <g fill="none" stroke="var(--esparto)" stroke-width="1">
           <path d="M-50,420 C300,360 600,410 900,340 C1150,285 1330,320 1490,270" opacity=".12"/>
           <path d="M-50,340 C320,290 620,330 920,265 C1170,215 1340,245 1490,200" opacity=".09"/>
@@ -241,7 +443,7 @@
         </g>
       </svg>
       <div class="container contact__inner">
-        <p class="label label--light reveal">05 — Contacto</p>
+        <p class="label label--light reveal">08 — Contacto</p>
         <h2 class="contact__title reveal">Tu arruí te está esperando<br>en alguna cresta de Alicante.</h2>
         <p class="contact__sub reveal">Cuéntanos fechas y te preparamos la expedición. Respondemos en menos de 24 horas.</p>
         <div class="contact__actions reveal">
@@ -266,6 +468,12 @@
     </div>
   </footer>
 
-  <script src="assets/js/main.js?v=20260713" defer></script>
+  <!-- ============ LIGHTBOX (galería) ============ -->
+  <div class="lightbox" id="lightbox" aria-hidden="true">
+    <button class="lightbox__close" type="button" aria-label="Cerrar" data-lightbox-close>&times;</button>
+    <div class="lightbox__content" data-lightbox-content></div>
+  </div>
+
+  <script src="assets/js/main.js?v=20260715" defer></script>
 </body>
 </html>
